@@ -9,7 +9,7 @@ public class SecondMainForClassLoader
      public static void main(String[] args) throws Exception 
      {
          String path2class = new String();
-         if (args.length != 0 && args[0].length()!=0 )
+/*         if (args.length != 0 && args[0].length()!=0 )
          {
         	 path2class = args[0];
          }
@@ -17,9 +17,10 @@ public class SecondMainForClassLoader
          {
              System.out.println("Please, execute program in the following format: java SrcondMainForClassLoader disk:\\path\\class.");
              return;
-         } 
+         } */
          Scanner input = new Scanner(System.in);
          String nextStep = null;
+         path2class = "e:\\Semaphore.class";
          do 
          {
         	 if (nextStep != null && !nextStep.equals(""))
@@ -27,7 +28,7 @@ public class SecondMainForClassLoader
         		 path2class = nextStep;
         	 }
              System.out.println("Loading class from '" + path2class + "' directory.");
-             ClassLoader classLoader = new MyClassLoader(path2class);
+             ClassLoader classLoader = new MyClassLoader(MyClassLoader.class.getClassLoader(), path2class);
              Class<?> loadedclass = null;
              try
              {

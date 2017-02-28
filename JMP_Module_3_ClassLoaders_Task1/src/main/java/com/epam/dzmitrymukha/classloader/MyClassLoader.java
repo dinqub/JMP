@@ -16,8 +16,9 @@ public class MyClassLoader extends ClassLoader
      */
     private String path;
 
-    public MyClassLoader(String path) 
+    public MyClassLoader(ClassLoader parent, String path) 
     {
+    	super(parent);
         this.path = path;
     }
 

@@ -16,7 +16,7 @@ public class FirstMainForClassLoader
              return;
          }
          System.out.println("Loading class from '" + path2class + "' directory");
-         ClassLoader classLoader = new MyClassLoader(path2class);
+         ClassLoader classLoader = new MyClassLoader(MyClassLoader.class.getClassLoader(), path2class);
          Class<?> loadedclass = classLoader.loadClass(className);
          Object instance = loadedclass.newInstance();
          loadedclass.getMethod("lever").invoke(instance);
