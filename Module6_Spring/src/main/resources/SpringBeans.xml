@@ -1,0 +1,42 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+	http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<context:property-placeholder location="classpath:foo.properties"/>
+	<bean id="InitBean" class="epam.jmp.muha.spring.definition.InitBean"/>
+	<bean id="CustomPostProcessor" class="epam.jmp.muha.spring.definition.CustomPostProcessor"/>
+	<bean id="DestroyBean" class="epam.jmp.muha.spring.definition.DestroyBean"/>
+	
+	<bean id="A" class="epam.jmp.muha.spring.A">
+		<property name="name" value="${ObjectA.bean_A_Property}" />
+	</bean>
+	
+	<bean id="B" class="epam.jmp.muha.spring.B">
+		<constructor-arg ref="A"/>
+	</bean>
+	
+	<bean id="C" class="epam.jmp.muha.spring.C">
+		 <lookup-method name="getObjectD" bean="D"/>
+	</bean>
+	
+	<bean id="D" class="epam.jmp.muha.spring.D" scope="prototype">
+		<property name="nameD" value="Bean D" />
+	</bean>
+	
+	<bean id="E" class="epam.jmp.muha.spring.E">
+	    <replaced-method name="sayHello" replacer="MethodReplacer">
+	      	<arg-type>String</arg-type>
+	    </replaced-method>
+  	</bean>
+      
+	<bean id="MethodReplacer" class="epam.jmp.muha.spring.EReplacer"/>
+	
+	<bean id="F" class="epam.jmp.muha.spring.F" destroy-method = "destroy" init-method = "init">
+		<property name="nameF" value="bean F"/>
+	</bean>
+</beans>
