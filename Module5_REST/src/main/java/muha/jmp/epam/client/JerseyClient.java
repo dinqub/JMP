@@ -117,8 +117,8 @@ public class JerseyClient {
 	}
 	private static void checkUploadLogo(int id) throws Exception
 	{
-        File file = new File("c:/Users/Дмитрий/Documents/Больничный.jpg") ;
-        
+		File file = File.createTempFile("test", ".png" );
+		
         DefaultClientConfig clientConfig = new DefaultClientConfig();
         clientConfig.getClasses().add(MultiPartWriter.class);
         Client client = Client.create(clientConfig);
@@ -138,9 +138,7 @@ public class JerseyClient {
 					+ response.getStatus());
 		}
 
-		System.out.println("Output from Server by updateLogo Request test.... ");
-		String output = response.getEntity(String.class);
-		System.out.println(output+"\n");				
+		System.out.println("UpdateLogo Request test success....\n ");			
 	}
 	
 	private static void checkDownloadLogo(int id) throws Exception
@@ -160,7 +158,7 @@ public class JerseyClient {
 
 		String output = response.getEntity(String.class);
 
-		System.out.println("Output from Server by downloadLogo rest Request test .... ");		
+		System.out.println("DownloadLogo rest Request test success....\n ");		
 	}
 	private static void checkRemove(int id)
 	{
@@ -179,44 +177,7 @@ public class JerseyClient {
 
 		String output = response.getEntity(String.class);
 
-		System.out.println("Output from Server by delete rest Request test .... ");
-		System.out.println(output+"\n");	
+		System.out.println("Delete rest Request test success.... ");
 	}
-
-	public static void executeMultiPartRequest(String urlString, File file, String fileName, String fileDescription) throws Exception 
-	    {
-		File inFile = new File("C:\\Users\\Дмитрий\\Documents\\Больничный.jpg");
-		FileInputStream fis = null;
-		try {
-			fis = new FileInputStream(inFile);
-			DefaultHttpClient httpclient = new DefaultHttpClient(new BasicHttpParams());
-			
-			// server back-end URL
-			HttpPost httppost = new HttpPost(urlString);
-			MultipartEntity entity = new MultipartEntity();
-			// set the file input stream and file name as arguments
-			//entity.addPart("file", new InputStreamBody(fis, inFile.getName()));
-			httppost.setEntity(entity);
-			// execute the request
-			HttpResponse response = httpclient.execute(httppost);
-			
-			int statusCode = response.getStatusLine().getStatusCode();
-			HttpEntity responseEntity = response.getEntity();
-			String responseString = EntityUtils.toString(responseEntity, "UTF-8");
-			
-			System.out.println("[" + statusCode + "] " + responseString);
-			
-		} catch (ClientProtocolException e) {
-			System.err.println("Unable to make connection");
-			e.printStackTrace();
-		} catch (IOException e) {
-			System.err.println("Unable to read file");
-			e.printStackTrace();
-		} finally {
-			try {
-				if (fis != null) fis.close();
-			} catch (IOException e) {}
-		}
-	    }
 }
 
