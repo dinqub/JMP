@@ -1,0 +1,73 @@
+.multiselect {
+    width: 250px;
+}
+.selectBox {
+    position: relative;
+}
+.selectBox select {
+    width: 250px;
+}
+.overSelect {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+}
+#checkboxes {
+    display: none;
+    border: 1px #dadada solid;
+}
+#checkboxes label {
+    display: block;
+    text-align: left;
+}
+#checkboxes label:hover {
+    background-color: #1e90ff;
+}
+
+.abs{
+	position:absolute;
+	display:inline;
+	  color: black;
+  background-color: white;
+   margin-left: 20px;
+}
+.buttonpanel{
+	  display: -webkit-inline-box;
+  margin-left: 300px;
+}
+.center{
+	display: flex;
+	margin-left: 30%;
+}
+
+.firstselect{
+	  display: inline-block;
+}
+
+
+h1 {
+	margin-left: 21px;
+}
+a.news {
+	font-weight: bold;	
+	margin-top: 19 px;
+	padding: 19px;
+}
+a.date {
+	font-weight: bold;	
+	padding: 19px;
+	text-decoration:underline;
+	
+}
+a.shortText{
+	padding: 19px;
+}
+a.comment{
+padding: 19px;
+color: red;
+}
+
+tr.newsLine{
+	height:11%;
+}
+
+

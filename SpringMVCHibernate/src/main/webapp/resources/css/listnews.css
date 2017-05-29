@@ -1,0 +1,78 @@
+.navigation {
+	background: darkgray;
+	height: auto;
+	min-height: 7%;
+}
+
+.navp {
+	padding-top: 2%;
+}
+
+.mainNews {
+	padding: 4px;
+	padding-top: 15;
+}
+
+.central {
+	height: 70.5%;
+	margin-top: 15;
+}
+
+.right {
+	float: right;
+}
+
+.newsLine {
+	height: 37%;
+}
+
+h1 {
+	margin-left: 21px;
+}
+
+a.news {
+	font-weight: bold;
+	padding: 19px;
+	color: blue;
+	text-decoration: underline;
+}
+
+a.date {
+	font-weight: bold;
+	padding: 19px;
+	text-decoration: underline;
+}
+
+a.shortText {
+	padding: 19px;
+}
+
+a.comment {
+	padding: 19px;
+}
+
+.checkbox {
+	width: 250px;
+}
+
+.leftdiv {
+	margin-left: 15;
+}
+
+.underLine {
+	height: 15%;
+}
+
+.hightDiv {
+	height: 30%;
+}
+.tagNames{
+	color: darkgray;
+}
+.pagination {
+	text-decoration: none;
+}
+.choseButton {
+	background: black;
+	color: aliceblue;
+}

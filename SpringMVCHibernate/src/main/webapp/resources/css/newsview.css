@@ -1,0 +1,87 @@
+.mainNews {
+	border: 1px solid darkgray;
+	padding: 4px;
+	padding-top: 15;
+	min-height: 82.6%;
+	height: auto;
+}
+
+.commLine {
+	margin-left: 19;
+}
+
+.mainText {
+	min-height: 74%;
+	height: auto;
+}
+
+.right {
+	float: right;
+}
+
+.bottomspace {
+	margin-bottom: 20px;
+}
+
+.button {
+	width: 50%;
+}
+
+h1 {
+	margin-left: 21px;
+}
+
+a.news {
+	font-weight: bold;
+	margin-top: 19 px;
+	padding: 19px;
+}
+
+a.date {
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.shortText {
+	padding: 19px;
+	word-wrap: break-word;
+	width: 90%;
+}
+
+div.commentText {
+	background-color: silver;
+	word-wrap: break-word;
+	width: 50%;
+	margin-bottom: 10px;
+}
+
+table.comTab {
+	margin-left: 19px;
+}
+
+input.in {
+	margin-top: 15px;
+	width: 50%;
+	height: 8%;
+	margin-bottom: 5px;
+}
+
+input.but {
+	padding: 0.6em;
+	align: right;
+}
+
+.commentText {
+	width: 50%;
+	height: 8%;
+	margin-bottom: 5px;
+}
+
+.DivRight {
+	float: right;
+}
+
+.navigation {
+	height: 3%;
+	margin-top: 40;
+}

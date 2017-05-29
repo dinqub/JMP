@@ -1,0 +1,15 @@
+h1 {
+	margin-left: 21px;
+	margin-top: 2px;
+}
+input.but {
+  padding: 0.7em 2.8em; /* отступ от текста */
+  margin-left:134px;
+  margin-top:5px;
+} 
+input.input {
+ margin-top:3px; /* отступ от текста */
+} 
+input.inputs {
+ margin-left:23px; /* отступ от текста */
+} 

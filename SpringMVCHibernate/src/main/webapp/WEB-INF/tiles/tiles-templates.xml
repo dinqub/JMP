@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<definition name="base-template" template="/WEB-INF/tiles/base-template.jsp">
+		<put-attribute name="title" value="Persons" />
+		<put-attribute name="header" value="/WEB-INF/tiles/part/header.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/part/footer.jsp" />
+	</definition>
+	
+	<definition name="person" extends="base-template">
+		<put-attribute name="content" value="/WEB-INF/views/person.jsp" />
+	</definition>
+	
+	<definition name="addperson" extends="base-template">
+		<put-attribute name="content" value="/WEB-INF/views/addperson.jsp" />
+	</definition>
+	
+	<definition name="editperson" extends="base-template">
+		<put-attribute name="content" value="/WEB-INF/views/editperson.jsp" />
+	</definition>
+	
+	
+	<definition name="login" extends="base-template">
+		<put-attribute name="content" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	
+	<definition name="registration" extends="base-template">
+		<put-attribute name="content" value="/WEB-INF/views/registration.jsp" />
+	</definition>
+	
+	<definition name="upload" extends="base-template">
+		<put-attribute name="content" value="/WEB-INF/views/upload.jsp" />
+	</definition>
+	
+	<definition name="error" extends="base-template">
+		<put-attribute name="content" value="/WEB-INF/views/error.jsp" />
+	</definition>
+
+
+</tiles-definitions>

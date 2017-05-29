@@ -1,0 +1,35 @@
+.header {
+	border: 2px solid black;
+	height: auto;
+	min-height:11%;
+	margin-left: 3;
+	margin-top: 3;
+	margin-right: 3;
+	border-bottom-width: 0;
+}
+
+.content {
+	border: 2px solid black;
+	min-height:85%;
+	height:auto;
+	padding: 3px;
+	margin-left: 3;
+	margin-right: 3;
+}
+
+.footer {
+	border: 2px solid black;
+	height: auto;
+	min-height:2%;
+	margin-left: 3;
+	margin-botton: 3;
+	margin-right: 3;
+	border-top-width: 0;
+}
+a:link {
+ color: blue;
+}
+
+a:visited {
+ color: blue;
+}
